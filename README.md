@@ -1,6 +1,6 @@
 # 🚀 Automated Web Deployment on AWS App Runner
 
-This project demonstrates a professional cloud-native CI/CD pipeline. It features a Node.js application hosted on **AWS App Runner**, with automatic deployments triggered directly from this GitHub repository.
+This project demonstrates a production-ready **CI/CD pipeline**. By connecting GitHub to **AWS App Runner**, any code changes pushed locally are automatically built and deployed to a live cloud environment.
 
 ## 🌐 Live Application
 **Status:** ✅ Running  
@@ -8,38 +8,32 @@ This project demonstrates a professional cloud-native CI/CD pipeline. It feature
 
 ---
 
-## 📸 Project Showcase
+## 📸 Proof of Deployment & Automation
 
-### 1. Live Production Site
-The frontend is a Node.js Express server delivering a clean "Deployment Successful" message.
-![Live Website](./website.png)
+### 1. Initial Deployment
+The first successful launch of the Node.js server on AWS infrastructure.
+![Initial Deployment](./deployment-success.png)
 
-### 2. AWS App Runner Infrastructure
-The service is managed by AWS, providing built-in load balancing and SSL termination.
-![AWS Console](./aws-dashboard.png)
+### 2. Verified CI/CD Update (The "Pro App" Change)
+To test the automation, I updated the `index.js` locally and pushed to GitHub. AWS App Runner detected the change and automatically updated the live site to "Welcome to My Pro App" without any manual intervention.
+![Updated Site](./welcome-pro-app.png)
 
-### 3. Developer Workflow (CI/CD)
-Using Git Bash and VS Code, code changes are pushed to GitHub, which automatically signals AWS to redeploy the latest version.
-![Git Workflow](./images/git-workflow.png)
+### 3. AWS Infrastructure Health
+The AWS App Runner console confirms the service status is **Running** and healthy, linked directly to the GitHub source.
+![AWS Console Status](./aws-dashboard.png)
 
 ---
 
 ## 🛠️ Technical Stack
-* **Runtime:** Node.js 18
-* **Framework:** Express.js
+* **Runtime:** Node.js 18 (Express.js framework)
 * **Cloud Provider:** AWS (App Runner)
-* **CI/CD:** GitHub Actions / App Runner Service Connection
-* **Version Control:** Git
+* **Automation:** GitHub Source Connection (CI/CD)
+* **Tools:** VS Code, Git Bash
 
-## ⚙️ Local Setup & Deployment
-To run this project locally:
-1. Clone the repo: `git clone https://github.com/HSRIPADARAO1108/Simple_Fronted_Files.git`
-2. Install dependencies: `npm install`
-3. Start the server: `node index.js`
-
-To deploy to AWS:
-* Push code to the `main` branch. 
-* AWS App Runner detects the change and builds the service using `npm install` and `npm start` on port `8080`.
-
----
-*Created by [HSRIPADARAO1108](https://github.com/HSRIPADARAO1108)*
+## ⚙️ How it Works
+1. **Local Development:** Code is written and tested in VS Code.
+2. **Version Control:** Changes are committed and pushed via Git Bash:
+   ```bash
+   git add .
+   git commit -m "Updated homepage to Pro App"
+   git push origin main
